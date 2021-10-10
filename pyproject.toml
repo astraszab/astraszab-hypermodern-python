@@ -1,9 +1,8 @@
 [tool.poetry]
 name = "astraszab-hypermodern-python"
 version = "0.1.0"
-description = ""
-authors = ["astraszab <u.astraszab@gmail.com>"]
 description = "The hypermodern Python project"
+authors = ["astraszab <u.astraszab@gmail.com>"]
 license = "MIT"
 readme = "README.md"
 homepage = "https://github.com/astraszab/astraszab-hypermodern-python"
