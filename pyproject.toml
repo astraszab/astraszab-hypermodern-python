@@ -15,6 +15,7 @@ click = "^8.0.2"
 requests = "^2.26.0"
 
 [tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
 
 [tool.poetry.scripts]
 hypermodern-python = "astraszab_hypermodern_python.console:main"
