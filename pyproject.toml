@@ -16,6 +16,8 @@ requests = "^2.26.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
+coverage = {extras = ["toml"], version = "^6.0.2"}
+pytest-cov = "^3.0.0"
 
 [tool.poetry.scripts]
 hypermodern-python = "astraszab_hypermodern_python.console:main"
