@@ -1,7 +1,6 @@
 import textwrap
 
 import click
-import requests
 
 from . import __version__, wikipedia
 
