@@ -30,6 +30,7 @@ flake8-import-order = "^0.18.1"
 safety = "^1.10.3"
 mypy = "^0.910"
 types-requests = "^2.25.11"
+types-click = "^7.1.7"
 
 [tool.poetry.scripts]
 hypermodern-python = "astraszab_hypermodern_python.console:main"

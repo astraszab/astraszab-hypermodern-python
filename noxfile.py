@@ -38,7 +38,7 @@ def lint(session):
 @nox.session(python=["3.9", "3.8"])
 def mypy(session):
     args = session.posargs or locations
-    install_with_constraints(session, "mypy", "types-requests")
+    install_with_constraints(session, "mypy", "types-click", "types-requests")
     session.run("mypy", *args)
 
 
