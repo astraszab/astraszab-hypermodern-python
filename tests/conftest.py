@@ -1,5 +1,7 @@
 import pytest
 
+from astraszab_hypermodern_python import wikipedia
+
 
 def pytest_configure(config):
     config.addinivalue_line("markers", "e2e: mark as end-to-end test.")
@@ -12,4 +14,13 @@ def mock_requests_get(mocker):
         "title": "Lorem Ipsum",
         "extract": "Lorem ipsum dolor sit amet",
     }
+    return mock
+
+
+@pytest.fixture
+def mock_wikipedia_random_page(mocker):
+    mock = mocker.patch("astraszab_hypermodern_python.wikipedia.random_page")
+    mock.return_value = wikipedia.Page(
+        title="Lorem Ipsum", extract="Lorem ipsum dolor sit amet"
+    )
     return mock

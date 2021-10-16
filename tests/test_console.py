@@ -10,17 +10,12 @@ def runner():
     return click.testing.CliRunner()
 
 
-@pytest.fixture
-def mock_wikipedia_random_page(mocker):
-    return mocker.patch("astraszab_hypermodern_python.wikipedia.random_page")
-
-
-def test_main_succeeds(runner, mock_requests_get):
+def test_main_succeeds(runner, mock_wikipedia_random_page):
     result = runner.invoke(console.main)
     assert result.exit_code == 0
 
 
-def test_main_prints_title(runner, mock_requests_get):
+def test_main_prints_title(runner, mock_wikipedia_random_page):
     result = runner.invoke(console.main)
     assert "Lorem Ipsum" in result.output
 
