@@ -1,3 +1,4 @@
+from typing import cast
 from unittest.mock import Mock
 
 from _pytest.config import Config
@@ -13,7 +14,7 @@ def pytest_configure(config: Config) -> None:
 
 @pytest.fixture
 def mock_requests_get(mocker: MockFixture) -> Mock:
-    mock = mocker.patch("requests.get")
+    mock = cast(Mock, mocker.patch("requests.get"))
     mock.return_value.__enter__.return_value.json.return_value = {
         "title": "Lorem Ipsum",
         "extract": "Lorem ipsum dolor sit amet",
@@ -23,7 +24,9 @@ def mock_requests_get(mocker: MockFixture) -> Mock:
 
 @pytest.fixture
 def mock_wikipedia_random_page(mocker: MockFixture) -> Mock:
-    mock = mocker.patch("astraszab_hypermodern_python.wikipedia.random_page")
+    mock = cast(
+        Mock, mocker.patch("astraszab_hypermodern_python.wikipedia.random_page")
+    )
     mock.return_value = wikipedia.Page(
         title="Lorem Ipsum", extract="Lorem ipsum dolor sit amet"
     )
