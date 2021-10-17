@@ -1,3 +1,5 @@
+"""Client for the Wikipedia REST API, version 1."""
+
 from dataclasses import dataclass
 from typing import cast
 
