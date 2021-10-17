@@ -33,6 +33,7 @@ types-requests = "^2.25.11"
 types-click = "^7.1.7"
 flake8-docstrings = "^1.6.0"
 darglint = "^1.8.0"
+Sphinx = "^4.2.0"
 
 [tool.poetry.scripts]
 hypermodern-python = "astraszab_hypermodern_python.console:main"
