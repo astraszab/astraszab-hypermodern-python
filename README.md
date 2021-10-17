@@ -3,3 +3,5 @@
 [![PyPI](https://img.shields.io/pypi/v/astraszab-hypermodern-python.svg)](https://pypi.org/project/astraszab-hypermodern-python/)
 
 # astraszab-hypermodern-python
+
+From [Hypermodern Python article series](https://cjolowicz.github.io/posts/hypermodern-python-01-setup/)
