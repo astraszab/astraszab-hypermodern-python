@@ -35,6 +35,7 @@ flake8-docstrings = "^1.6.0"
 darglint = "^1.8.0"
 Sphinx = "^4.2.0"
 sphinx-autodoc-typehints = "^1.12.0"
+codecov = "^2.1.12"
 
 [tool.poetry.scripts]
 hypermodern-python = "astraszab_hypermodern_python.console:main"
