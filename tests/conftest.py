@@ -11,11 +11,13 @@ from astraszab_hypermodern_python import wikipedia
 
 
 def pytest_configure(config: Config) -> None:
+    """Pytest configuration hook."""
     config.addinivalue_line("markers", "e2e: mark as end-to-end test.")
 
 
 @pytest.fixture
 def mock_requests_get(mocker: MockFixture) -> Mock:
+    """Fixture for mocking requests.get."""
     mock = cast(Mock, mocker.patch("requests.get"))
     mock.return_value.__enter__.return_value.json.return_value = {
         "title": "Lorem Ipsum",
@@ -26,6 +28,7 @@ def mock_requests_get(mocker: MockFixture) -> Mock:
 
 @pytest.fixture
 def mock_wikipedia_random_page(mocker: MockFixture) -> Mock:
+    """Fixture for mocking wikipedia.random_page."""
     mock = cast(
         Mock, mocker.patch("astraszab_hypermodern_python.wikipedia.random_page")
     )
