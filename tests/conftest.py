@@ -1,3 +1,5 @@
+"""Package-wide test fixtures."""
+
 from typing import cast
 from unittest.mock import Mock
 

@@ -1,3 +1,5 @@
+"""Test cases for the console module."""
+
 from unittest.mock import Mock
 
 from click.testing import CliRunner
